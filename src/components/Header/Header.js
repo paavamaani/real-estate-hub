@@ -15,7 +15,9 @@ const Header = () => {
       </button>
       <ul
         className={`flex-col md:flex-row list-none md:flex ${
-          isOpen ? 'flex top-12 right-0 shadow-md rounded m-2' : 'hidden'
+          isOpen
+            ? 'p-2 flex top-12 right-0 shadow-md rounded m-2 z-10'
+            : 'hidden'
         } absolute md:relative bg-white w-3/4 md:w-auto`}
       >
         <li className='mx-4 px-4 bg-gray-900 text-white rounded-md py-2 text-sm'>
