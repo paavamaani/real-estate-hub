@@ -1,8 +1,6 @@
 import React from 'react';
-import Slider from 'react-slick';
 
 import { SiGooglemaps } from 'react-icons/si';
-import { AiOutlineHeart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 const PropertyCard = ({ property }) => {
