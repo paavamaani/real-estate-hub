@@ -2,6 +2,16 @@ Currently, the prototype is compatible for desktop devices only.
 
 ### Live Demo
 
+https://real-estate-hub-three.vercel.app/
+
+### Tech Stack
+
+- React
+- React DOM
+- React Router
+- Tailwind
+- Grunt
+
 ### Prerequisites for local setup
 
 Before cloning the repo, make sure you have the following installed:
@@ -12,7 +22,7 @@ Before cloning the repo, make sure you have the following installed:
 ### Installation
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/real-estate-hub.git
+   git clone https://github.com/paavamaani/real-estate-hub.git
    cd real-estate-hub
 
 2. Install Node Modules
