@@ -3,9 +3,9 @@ import Finder from '../Finder/Finder';
 
 const Home = () => {
   return (
-    <div className='flex'>
+    <div className='flex flex-col md:flex-row'>
       <img
-        className='m-8 w-[60%]'
+        className='m-8 md:w-[60%]'
         src='https://cdn.tollbrothers.com/sites/comtollbrotherswww/home/heroImages/20-Flora-At-Morrison-Ranch-in-Gilbert-AZ_1920.jpg'
         alt='Home'
       />

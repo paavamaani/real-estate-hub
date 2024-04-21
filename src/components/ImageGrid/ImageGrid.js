@@ -3,7 +3,7 @@ import React from 'react';
 const ImageGrid = ({ property }) => {
   return (
     <div className='grid grid-cols-8 gap-1'>
-      <div className='relative h-[500px] col-span-5'>
+      <div className='relative h-[500px] col-span-8 md:col-span-5'>
         <img
           src={property.images[0]}
           alt='Main'
@@ -15,7 +15,7 @@ const ImageGrid = ({ property }) => {
           </span>
         )}
       </div>
-      <div className='relative h-[500px] col-span-3 grid grid-rows-2 grid-cols-2 gap-1'>
+      <div className='relative h-[500px] col-span-8 md:col-span-3 grid grid-rows-2 grid-cols-2 gap-1'>
         <img
           src={property.images[1]}
           alt='Sub1'

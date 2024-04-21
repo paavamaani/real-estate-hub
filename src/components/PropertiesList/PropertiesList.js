@@ -15,7 +15,7 @@ const PropertiesList = () => {
   return (
     <>
       <FilterBar onChangeFilter={onChangeFilter} />
-      <div className='m-8 grid grid-cols-3 gap-8'>
+      <div className='m-8 grid grid-cols-1 md:grid-cols-3 gap-8'>
         {properties.map((property, index) => (
           <PropertyCard key={index} property={property} />
         ))}

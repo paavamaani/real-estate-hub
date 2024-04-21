@@ -32,8 +32,8 @@ const Property = () => {
 
       <ImageGrid property={property} />
 
-      <div className='mx-40 my-4 grid grid-rows-4 grid-cols-5 gap-4'>
-        <div className='row-span-4 col-span-3'>
+      <div className='mx-8 md:mx-40 my-4 grid grid-rows-4 grid-cols-5 gap-4'>
+        <div className='row-span-4 col-span-5 md:col-span-3'>
           <p className='text-2xl font-semibold'>{property.name}</p>
           <p className='text-gray-500'>{property.address}</p>
           <div className='my-2 py-2 text-center flex justify-between border-b border-slate-300'>
@@ -73,7 +73,7 @@ const Property = () => {
             </p>
           </div>
         </div>
-        <div className='ml-20 row-span-2 col-span-2 flex flex-col justify-center items-center rounded border border-gray-200 top-4 sticky'>
+        <div className='mx-8 md:ml-20 row-span-2 col-span-5 md:col-span-2 flex flex-col justify-center items-center rounded border border-gray-200 top-4 sticky'>
           <p className='m-2 text-3xl'>Planning to Buy?</p>
           <p className='m-2 text-center text-2xl font-semibold'>
             {property.price}

@@ -1,4 +1,4 @@
-Currently, the prototype is compatible for desktop devices only.
+Currently, the prototype is responsive and can be use in devices with different screen sizes. The functionalities are limited in nature. All the links provided are not redirected and are dummy in some scenarios.
 
 ### Live Demo
 

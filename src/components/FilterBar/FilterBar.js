@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FiX, FiFilter } from 'react-icons/fi';
 
 const FilterBar = ({ onChangeFilter }) => {
   const [location, setLocation] = useState('');
@@ -6,6 +7,7 @@ const FilterBar = ({ onChangeFilter }) => {
   const [beds, setBeds] = useState('beds');
   const [isTownHouse, setIsTownHouse] = useState(false);
   const [isIndividualHouse, setIsIndividualHouse] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     onChangeFilter({
@@ -30,8 +32,8 @@ const FilterBar = ({ onChangeFilter }) => {
   };
 
   return (
-    <div className='m-1 px-40 py-1 flex justify-between items-center border-b bg-slate-50 border-slate-100'>
-      <form className='flex-1' onSubmit={onSubmitLocation}>
+    <div className='relative m-1 md:px-40 py-1 flex justify-between items-center border-b bg-slate-50 border-slate-100'>
+      <form className='flex-1 m-2' onSubmit={onSubmitLocation}>
         <input
           type='text'
           value={location}
@@ -46,7 +48,20 @@ const FilterBar = ({ onChangeFilter }) => {
           Search
         </button>
       </form>
-      <div className='flex justify-between gap-8'>
+      <button className='m-2 md:hidden' onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? (
+          <FiX className='h-6 w-6' />
+        ) : (
+          <FiFilter className='h-6 w-6' />
+        )}
+      </button>
+      <div
+        className={`${
+          isOpen
+            ? 'p-4 absolute block top-10 right-0 gap-2 w-2/4 bg-white shadow-md rounded z-10'
+            : 'hidden md:flex justify-between gap-8'
+        }`}
+      >
         <label className='flex items-center space-x-1'>
           <input
             type='checkbox'
@@ -64,7 +79,7 @@ const FilterBar = ({ onChangeFilter }) => {
           <span>Individual House</span>
         </label>
         <select
-          className='px-2 py-1 border border-gray-300 rounded'
+          className='my-1 px-2 py-1 border border-gray-300 rounded'
           value={sort}
           onChange={(e) => setSort(e.target.value)}
         >
@@ -73,7 +88,7 @@ const FilterBar = ({ onChangeFilter }) => {
           <option value='rating'> Distance </option>
         </select>
         <select
-          className='px-2 py-1 border border-gray-300 rounded'
+          className='my-1 px-2 py-1 border border-gray-300 rounded'
           value={beds}
           onChange={(e) => setBeds(e.target.value)}
         >
